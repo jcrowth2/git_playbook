@@ -82,7 +82,7 @@ Check the docs for how these commands work.
 Note: Using `git status` often will be useful, and can give advice on how to undo also!
 
 ## Section 2.5 Branching
-### Exercise Adding to a Branch:
+### Exercise: Adding to a Branch:
 
 It is important before any `git checkout` that you have resolved any updates to your files,
 otherwise there is a chance they can be lost. `git status` is your friend here. 
@@ -101,6 +101,33 @@ does contain `SP_logo.png`
 7. Merge `add_logo` into `add_branch_exercise`
 8. Understand what is different about this merge. Use git log to investigate.
    Of the two, which one is the "fast-forward" and what does it mean?
+   
+### Exercise: Merge Conflicts:
+
+Two colleagues have been working independently and have been tasked with adding the full
+text of "Macbeth" and "Hamlet" to the repo.
+
+There are two branches `macbeth` and `hamlet`
+
+1. Checkout one of these branches.
+2. Merge the other branch into it.
+3. Follow the advice in Git Book 3.2 and Bash to resolve conflicts!
+   (look in the conflicting files for text like:<br>
+    <<<<<<< HEAD:<br>
+    foo<br>
+    =======<br>
+    bar<br>
+    \>>>>>>>>
+
+For more complex merges with many conflicts it may be easier to use 
+`git --mergetool` and configure a useful editor. Or indeed using an IDE.
+
+If you know for sure beforehand you can merge branches and specify which branch
+to overrule conflicts using `ours` or `theirs` as detailed in the docs
+https://git-scm.com/docs/merge-strategies. But this is generally considered risky. 
+In general you could be dealing with conflicts where the correct resolution is know by
+previous authors, and you should seek support unless you know for certain. 
+
 
 
 
