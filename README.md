@@ -128,8 +128,27 @@ https://git-scm.com/docs/merge-strategies. But this is generally considered risk
 In general you could be dealing with conflicts where the correct resolution is know by
 previous authors, and you should seek support unless you know for certain. 
 
+It is good practice to delete branches when you have merged them. As once merged
+both the `master` branch and the new branch are pointing to the same place.
+The command for this is: `git branch -d <branch name>`. This will keep your git
+history tidy. 
+
+### Exercise: Merge Conflicts:
+
+Branching options:
+
+Using https://git-scm.com/book/en/v2/Git-Branching-Branch-Management as a guide.
+Answer the following questions?
+
+1. What command do I use to show all active branches and how do I know which I am currently
+on?
+2. How can I see branches that are already merged into my current branch?
+Is it okay to delete these branches?
+3. How can I force delete a branch I know I definitely don't need?
+4. What does `git push --set-upstream` do?
+5. What command do I use to rename branches?
 
 
-
-
+## Section 2.5 Branching
+### Exercise: Adding to a Branch:
 
