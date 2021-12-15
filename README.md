@@ -149,8 +149,8 @@ Is it okay to delete these branches?
 5. What command do I use to rename branches?
 
 
-## Section 3.1 Interactive Rebase
-### Exercise: 
+## Section 3.1 Interactive
+### Interactive Rebase Exercise: 
 
 A _genius_ has been working on a song in this very repo!<br>
 Use `git checkout interactive` to take a look at `lyrics.txt`
@@ -173,4 +173,18 @@ at rebasing. At any point in the rebase use `git rebase --abort` to have another
 When completed send a screenshot of your git log to a member of Special Projects
 to be congratulated (and for any improvements)
 
+### Interactive Staging Exercise: 
+
+A colleague has done a big chunk of work and had to move on to another branch and has
+stored all his stages in a big `wip` commit. 
+
+Now it's your job to commit them all appropriately and atomically. 
+
+1. Checkout the branch `interactive_staging`
+2. Use an appropriate `git reset` to keep all changes that the `wip` commit has created 
+   and have them unstaged. Make sure you know what `soft`,`hard` and `mixed` do.
+   (check the docs https://git-scm.com/docs/git-reset)
+3. Using `git add -i` and the `p` command. Try to commit everything in order. You will
+need to make three separate commits. 
+   
 
