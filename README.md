@@ -149,6 +149,28 @@ Is it okay to delete these branches?
 5. What command do I use to rename branches?
 
 
-## Section 2.5 Branching
-### Exercise: Adding to a Branch:
+## Section 3.1 Interactive Rebase
+### Exercise: 
+
+A _genius_ has been working on a song in this very repo!<br>
+Use `git checkout interactive` to take a look at `lyrics.txt`
+
+Before anyone uses `git push` to upload this song to the `remote repo` for the world to see,
+let's try and clean up the artist's commit history.
+
+Task: Using `git rebase -i` and the git book (or other documentation),
+clean up the commits in lyrics.txt.
+
+Hints:
+1. Keep your commits atomic (i.e. verses and chorus separate)
+2. The commit messages could be improved, check it follows advice in the style guide and
+   edit them. 
+3. Any errors first time round do not need to be addressed in separate commits, make it
+seem like the _composition_ was flawless first time around
+4. The rebase can be done in one go, but it's perfectly sesnible to have a few goes
+at rebasing. At any point in the rebase use `git rebase --abort` to have another go.
+   
+When completed send a screenshot of your git log to a member of Special Projects
+to be congratulated (and for any improvements)
+
 
