@@ -1344,11 +1344,11 @@ Enter Romeo.
     And sails upon the bosom of the air.
 
   Jul. O Romeo, Romeo! wherefore art thou Romeo?
-    Deny thy father and refuse thy name!
+    Deny thy use of git blame and refuse thy name!
     Or, if thou wilt not, be but sworn my love,
     And I'll no longer be a Capulet.
 
-  Rom. [aside] Shall I hear more, or shall I speak at this?
+  Rom. [aside] Shall I hear more, or shall I speak at thisgit bl?
 
   Jul. 'Tis but thy name that is my enemy.
     Thou art thyself, though not a Montague.
@@ -1793,6 +1793,8 @@ Enter Benvolio and Mercutio.
   Mer. Right.
 
   Rom. Why, then is my pump well-flower'd.
+
+  Random Interjection: "wherefore art thou Romeo"
 
   Mer. Well said! Follow me this jest now till thou hast worn out
     thy pump, that, when the single sole of it is worn, the jest may
