@@ -5,7 +5,15 @@ to get comfortable with Git.
 
 Follow the steps below when instructed to as part of the QR playbook.
 
-## Section 2.2 Commits / Staging
+### Contents
+[Commits / Staging](#commits-/-staging)<br>
+[Undoing](#undoing)<br>
+[Branching](#branching)<br>
+[Interctive Git](#interactive-git)<br>
+[Git Blame](#git-blame)<br>
+
+
+## Commits / Staging
 ### Exercise: Commits (10 minutes)
 
 Follow the below steps:
@@ -38,8 +46,8 @@ You have successfully cloned a repo, created a branch locally (where all changes
 do not affect the main code base or **master** **branch**) and have made changes and
 committed these changes. 
 
-To continue on the git playbook: read and understand the following git docs<br>
-https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
+To continue on the git playbook: read and understand the [next chapter in Git Book](
+https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 
 Specifically pay attention to:
 - Untracked (git is not paying attention to this file until you tell it to)
@@ -52,7 +60,7 @@ Feel free to play around and make some more commits on your branch. This is a lo
 branch unique to you and your machine, so don't worry about going wrong (on version
 control, it's quite hard to do!).
 
-## Section 2.4 Undoing!
+## Undoing!
 ### Exercise: Undo / Amend (10 minutes)
 
 The last commit we made should have been adding text to our `hello_world.txt` file.<br>
@@ -81,7 +89,7 @@ Check the docs for how these commands work.
 
 Note: Using `git status` often will be useful, and can give advice on how to undo also!
 
-## Section 2.5 Branching
+## Branching
 ### Exercise: Adding to a Branch:
 
 It is important before any `git checkout` that you have resolved any updates to your files,
@@ -123,21 +131,19 @@ For more complex merges with many conflicts it may be easier to use
 `git --mergetool` and configure a useful editor. Or indeed using an IDE.
 
 If you know for sure beforehand you can merge branches and specify which branch
-to overrule conflicts using `ours` or `theirs` as detailed in the docs
-https://git-scm.com/docs/merge-strategies. But this is generally considered risky. 
+to overrule conflicts using `ours` or `theirs` as detailed in [the docs](
+https://git-scm.com/docs/merge-strategies). But this is generally considered risky. 
 In general you could be dealing with conflicts where the correct resolution is know by
 previous authors, and you should seek support unless you know for certain. 
 
 It is good practice to delete branches when you have merged them. As once merged
 both the `master` branch and the new branch are pointing to the same place.
 The command for this is: `git branch -d <branch name>`. This will keep your git
-history tidy. 
-
-### Exercise: Merge Conflicts:
+history tidy.
 
 Branching options:
 
-Using https://git-scm.com/book/en/v2/Git-Branching-Branch-Management as a guide.
+Using [Git Book](https://git-scm.com/book/en/v2/Git-Branching-Branch-Management) as a guide.
 Answer the following questions?
 
 1. What command do I use to show all active branches and how do I know which I am currently
@@ -148,8 +154,7 @@ Is it okay to delete these branches?
 4. What does `git push --set-upstream` do?
 5. What command do I use to rename branches?
 
-
-## Section 3.1 Interactive
+## Interactive Git
 ### Interactive Rebase Exercise: 
 
 A _genius_ has been working on a song in this very repo!<br>
@@ -173,6 +178,23 @@ at rebasing. At any point in the rebase use `git rebase --abort` to have another
 When completed send a screenshot of your git log to a member of Special Projects
 to be congratulated (and for any improvements)
 
+
+###Q: What would happen if you were to try to use `git push` on this branch?<br>
+A `git push` alone would FAIL. A normal push to a remote repo will work ONLY if 
+you have all the commits in the remote also in local. As we have rewrote history by 
+using a rebase, we now have commits in the remote which are not on our machine.
+
+#####Force Push:
+We address this issue using *force push* or `git push -f`. This *forces* the remote to
+align identically with local, overwriting all history. This command should only be used
+if the following are true:
+
+1. There is no-one else currently working off and adding commits this branch.
+2. You are completely happy that your rebase is successful.
+
+If you are not sure why **(1.)** is an issue. Then go back to the example in the git book
+on [_The Perils of Rebasing_](https://git-scm.com/book/en/v2/Git-Branching-Rebasing).
+
 ### Interactive Staging Exercise: 
 
 A colleague has done a big chunk of work and had to move on to another branch and has
@@ -182,9 +204,14 @@ Now it's your job to commit them all appropriately and atomically.
 
 1. Checkout the branch `interactive_staging`
 2. Use an appropriate `git reset` to keep all changes that the `wip` commit has created 
-   and have them unstaged. Make sure you know what `soft`,`hard` and `mixed` do.
-   (check the docs https://git-scm.com/docs/git-reset)
+   and have them **unstaged**. Make sure you know what `soft`,`hard` and `mixed` do.
+   (check out [reset](https://git-scm.com/docs/git-reset))
 3. Using `git add -i` and the `p` command. Try to commit everything in order. You will
 need to make three separate commits. 
+   
+## Git Blame:
+### Git Blame Exercise:
+
+
    
 
