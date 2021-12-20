@@ -210,8 +210,11 @@ Now it's your job to commit them all appropriately and atomically.
 need to make three separate commits. 
    
 ## Git Blame:
-### Git Blame Exercise:
+### Git Blame/Log Exercise:
 
-
+1. Using blame, check to see which commits and when lines 1346 - 1350 of `RJ.txt` were 
+last changed.
+2. Using an appropriate git log command, find out which commits the string
+   "wherefore are thou Romeo?" were introduced in. 
    
 
